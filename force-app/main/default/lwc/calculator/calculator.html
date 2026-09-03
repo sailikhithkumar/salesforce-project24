@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Calculator">
+        <lightning-layout multiple-rows>    
+            <lightning-layout-item size="6" padding="around-small"> 
+                <lightning-input type="text" variant="standard" label="Num1" placeholder="type here..." value ={firstNum} onchange={handleChangeFirst}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small"> 
+                <lightning-input type="text" variant="standard" label="Num2" placeholder="type here..." value ={secondNum} onchange={handleChangeSecond}></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+    <lightning-button-group class="slds-align_absolute-center">
+        <lightning-button label="Add" onclick={handleAdd}></lightning-button>
+        <lightning-button label="Subtract" onclick={handleSubtract}></lightning-button>
+        <lightning-button label="Multiply" onclick={handleMultiply}></lightning-button>
+        <lightning-button label="Divide" onclick={handleDivide}></lightning-button>
+    </lightning-button-group>
+    <div class="slds-m-around_medium">
+        Output : {result}
+    </div>
+    </lightning-card>
+</template>

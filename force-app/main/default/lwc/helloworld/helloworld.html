@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title ="My 1st Lwc Component">
+        <div class="slds-m-around_medium">
+        <h2>Hello Sai Likhith Kumar Garu</h2>
+        </div>
+        <!--one way data binding-->
+        <div class="slds-m-around_medium">
+            <h2>message : {message}</h2>
+        </div>
+        <!--two way data binding-->
+        <div class="slds-m-around_medium">
+            <lightning-input label="Enter your message"  onchange={handleChange}></lightning-input>
+            <h2>greeting : {greeting}</h2>
+        </div>
+        <!--conditional rendering if:true directive-->
+        <div class="slds-m-around_medium">
+            <lightning-button variant="brand" label="Click to show" onclick={handleClick}></lightning-button> &nbsp;
+            <lightning-button variant="brand" label="Click to hide" onclick={handleClickHide}></lightning-button>
+            <template if:true={isShow}>
+                <h2>hey Thanks for clicking</h2>
+            </template>
+        </div>
+        <!--if:false directive-->
+        <div class="slds-m-around_medium">
+            <lightning-button variant="brand" label="Hide me" onclick={handleHide}></lightning-button>
+            <template if:false={isShow}>
+                <h2>Hide me</h2>
+            </template>
+        </div>
+        <!--toggle button using directive-->
+        <div class="slds-m-around_medium">
+            <lightning-button variant="brand" label ="Toggle" onclick={handleToggle}></lightning-button>
+            <template if:true={toggleText}>
+                <h2>Hi, Toggle Button</h2>
+            </template>  
+        </div>
+            
+    </lightning-card> 
+</template>

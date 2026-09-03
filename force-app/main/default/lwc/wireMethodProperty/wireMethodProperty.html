@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title = "wireMethodProperty"> 
+        <template for:each = {getcontact.data} for:item = "con"> 
+            <div key = {con.Id}>
+                {con.Name} -
+                {con.Email}
+            </div>
+
+        </template> 
+
+    </lightning-card>
+    
+</template>
