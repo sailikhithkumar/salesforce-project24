@@ -7,4 +7,10 @@ export default class ParentComponent extends LightningElement {
     handleChange(event) {
         this.message = event.target.value;
     }
+
+     message = 'Waiting for child message...';
+
+    handleMessage(event) {
+        this.message = event.detail;
+    }
 }
